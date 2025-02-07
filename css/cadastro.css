@@ -25,14 +25,22 @@
     --color-neutra-0: #fff;
     --color-neutra-1: #1d1d1d;
 }
+body {
+    background-color: var(--color-primary-5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
 
 .single-section{
+    /* min-height: 100vh; */
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-primary-1);
+    /* background-color: var(--color-primary-1); */
     font-family: 'Nunito';
 }
 
@@ -40,6 +48,111 @@
     width: 100%;
     padding: 20px 80px 20px 80px;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
-    justify-content: left;
+    justify-content: flex-start;
+    /* background-color: red; */
+}
+
+.page-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--color-primary-1);
+    font-weight: 600;
+    font-size: 24px;
+    /* text-shadow: 0 5px 20px var(--color-primary-10); */
+}
+
+.page-title:hover{
+    transition: ease-in 0.1s;
+    color: var(--color-primary-10);
+}
+
+.nav-btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-btns:hover{
+    color: var(--color-primary-2);
+}
+.go-back-btn{
+    text-decoration: none;
+    color: var(--color-primary-10);
+}
+
+.fa-solid{
+    color: var(--color-primary-10);
+}
+
+.second-slice{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 320px; */
+    justify-content: center;
+    background-color: var(--color-primary-4);
+    border-radius: 10px;
+    padding: 20px 80px 20px 80px;
+    box-shadow: 0 5px 20px var(--color-primary-6);
+}
+
+.form-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-title{
+    color: var(--color-primary-1);
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+input {
+    padding: 5px;
+    font-size: 1rem;
+    border: 2px solid var(--color-primary-4);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: 'Nunito';
+}
+
+input:focus{
+    border-color: var(--color-primary-10);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--color-primary-8);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 5px 10px var(--color-primary-5);
+}
+
+button:hover {
+    background-color: var(--color-primary-10);
+    color: var(--color-primary-5);
+    font-weight: 500;
 }
