@@ -1,0 +1,112 @@
+.whole-page-content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    font-family: 'Nunito';
+    /* padding: 20px 80px 20px 80px; */
+    /* box-sizing: border-box; */
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--color-primary-1);
+    /* background: linear-gradient(180deg, var(--color-primary-1), var(--color-primary-2)); */
+}
+.the-first-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+    height: 100%;
+    width: 50%;
+    background-color: var(--color-primary-5);
+}
+.single-image{
+    width: 560px;
+    height: 100%;
+}
+.second-container{
+    width: 50%;
+    height: 100%;
+    background-color: orangered;
+    align-items: center;
+    justify-content: center;
+}
+.buttons{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 80px 20px 80px;
+    background-color: var(--color-primary-1);
+}
+.button-space{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-primary-2);
+    padding: 15px 35px 25px 35px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px var(--color-primary-2);
+}
+.btn-space-title{
+    display: flex;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-primary-6);
+}
+.buttons-itselves{
+    display: flex;
+    /* background-color: var(--color-primary-3); */
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    /* padding: 10px;
+    border-radius: 25px; */
+}
+.first-slice-of-btns{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px 0px 10px 0px;
+}
+/* .first-slice-of-btns:hover{
+    transition: ease-in 0.1s;
+    color: var(--color-primary-10);
+} */
+.btn-container{
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+    display: flex;
+    background-color: var(--color-primary-3);
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px var(--color-primary-3);
+}
+/* .btn-container:hover{
+    transition: ease-in 0.1s;
+    color: var(--color-primary-10);
+} */
+.button{
+    text-decoration: none;
+}
+.button:hover{
+    transition: ease-in 0.1s;
+    color: var(--color-primary-10);
+}
+.fa-solid{
+    color: var(--color-primary-7);
+    margin-right: 5px;
+}
+.btn-title{
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-6);
+    font-weight: 600;
+}
+/* .second-slice-of-btns{
+    padding-top: 30px;
+} */
