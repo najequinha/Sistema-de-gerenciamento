@@ -57,20 +57,29 @@
             </tr>
 
             <?php
-                if ($result) {
-                    while ($linha = mysqli_fetch_assoc($result)) {
-                        echo '<tr>
-                            <td>'.$linha['id'].'</td>
-                            <td>'.$linha['usuario'].'</td>
-                            <td>'.$linha['espaco'].'</td>
-                            <td>'.$linha['horario'].'</td>
-                            <td>
-                                <i class="fa-solid fa-trash"></i>
-                                <a href="espacos_excluir.php?id='.$id.'" class="op-btn"> Excluir </a> 
-                            </td>
-                        </tr>';
-                    }
-                }
+
+                if($result){
+                    while($linha = mysqli_fetch_assoc($result)){
+                        $id = $linha['id'];
+                        $usuario = $linha['usuario'];
+                        $espaco = $linha['espaco'];
+                        $horario = $linha['horario'];
+
+
+                        echo '
+                            <tr>
+                                <td>'.$id.'</td>
+                                <td>'.$usuario.'</td>
+                                <td>'.$espaco.'</td>
+                                <td>'.$horario.'</td>
+                                <td>
+                                    <i class="fa-solid fa-trash"></i>
+                                    <a href="reservas_excluir.php?id='.$id.'" class="op-btn"> Excluir </a> 
+                                </td>
+                            </tr>
+                            ';
+                    };
+                };
             ?>
         </table>
     </div>
