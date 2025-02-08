@@ -134,7 +134,7 @@ form{
 
 select {
     padding: 5px;
-    width: 25%;
+    width: 33%;
     font-size: 1rem;
     border: 2px solid var(--color-primary-4);
     border-radius: 10px;

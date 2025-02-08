@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar Reservas</title>
     <link rel="stylesheet" href="./css/listar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
@@ -64,8 +65,8 @@
                             <td>'.$linha['espaco'].'</td>
                             <td>'.$linha['horario'].'</td>
                             <td>
-                                <a href="reservas_editar.php?id='.$linha['id'].'" class="op-btn">Editar</a> 
-                                <a href="reservas_excluir.php?id='.$linha['id'].'" class="op-btn">Excluir</a> 
+                                <i class="fa-solid fa-trash"></i>
+                                <a href="espacos_excluir.php?id='.$id.'" class="op-btn"> Excluir </a> 
                             </td>
                         </tr>';
                     }

@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar usuários</title>
     <link rel="stylesheet" href="./css/listar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
@@ -69,8 +70,14 @@
                                     <td>'.$nome.'</td>
                                     <td>'.$email.'</td>
                                     <td>'.$telefone.'</td>
-                                    <td> <a href="usuarios_editar.php?id='.$id.'"> Editar </a> </td>
-                                    <td> <a href="usuarios_excluir.php?id='.$id.'"> Excluir </a> </td>
+                                    <td>
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                        <a href="espacos_editar.php?id='.$id.'" class="op-btn"> Editar </a> 
+                                    </td>
+                                    <td>
+                                        <i class="fa-solid fa-trash"></i>
+                                        <a href="espacos_excluir.php?id='.$id.'" class="op-btn"> Excluir </a> 
+                                    </td>
                                 </tr>
                                 ';
                         };
