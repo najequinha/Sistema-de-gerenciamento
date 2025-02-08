@@ -1,17 +1,20 @@
+<?php 
+    include './DB/config.php';
+
+    $sql = 'SELECT * FROM usuarios';
+    $result = mysqli_query($conn,$sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <title>Listar usuários</title>
     <link rel="stylesheet" href="./css/listar.css">
 </head>
 <body>
-
-    <!-- <h3>
-        Bem vindo, <?php echo $nome ?>
-    </h3> -->
 
     <header class="menu">
         <nav class="nav-bar">
@@ -27,7 +30,7 @@
             <div class="second-slice">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Voltar</a>
+                        <a href="index.php" class="nav-link">Voltar ao início</a>
                     </li>
     
 
@@ -46,34 +49,28 @@
                 <tr>
                     <td>id</td>
                     <td>Nome</td>
-                    <td>CPF</td>
-                    <td>Fone</td>
                     <td>Email</td>
-                    <td>Editar</td>
-                    <td>Excluir</td>
+                    <td>Telefone</td>
                 </tr>
 
-                <!-- <?php
+                <?php
 
                     if($result){
                         while($linha = mysqli_fetch_assoc($result)){
                             $id = $linha['id'];
                             $nome = $linha['nome'];
-                            $cpf = $linha['cpf'];
-                            $fone = $linha['fone'];
                             $email = $linha['email'];
+                            $telefone = $linha['telefone'];
 
 
-                            // echo $id . ' ' . $nome . ' ' . $cpf . ' ' . $fone . ' ' . $email . '<br>';
                             echo '
                                 <tr>
                                     <td>'.$id.'</td>
                                     <td>'.$nome.'</td>
-                                    <td>'.$cpf.'</td>
-                                    <td>'.$fone.'</td>
                                     <td>'.$email.'</td>
-                                    <td> <a href="editar_cli.php?id='.$id.'"> Editar </a> </td>
-                                    <td> <a href="excluir_cliente.php?id='.$id.'"> Excluir </a> </td>
+                                    <td>'.$telefone.'</td>
+                                    <td> <a href="usuarios_editar.php?id='.$id.'"> Editar </a> </td>
+                                    <td> <a href="usuarios_excluir.php?id='.$id.'"> Excluir </a> </td>
                                 </tr>
                                 ';
                         };
@@ -81,12 +78,12 @@
 
                     
 
-                ?> -->
+                ?>
             </table>
     </div>
 
     <div class="sing-up-btn">
-        <a href="#usuarios_cadastrar.php" class="go-back-btn">
+        <a href="usuarios_cadastrar.php" class="go-back-btn">
             <i class="fa-solid fa-user-plus"></i>
             <span class="btn-title">Cadastrar novo usuário</span>
         </a>
@@ -94,4 +91,3 @@
 
 </body>
 </html>
-

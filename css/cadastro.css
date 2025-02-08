@@ -123,8 +123,43 @@ form{
     gap: 15px;
 }
 
+.inputs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+}
+
+select {
+    padding: 5px;
+    width: 25%;
+    font-size: 1rem;
+    border: 2px solid var(--color-primary-4);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: 'Nunito';
+    background-color: var(--color-primary-1);
+    color: var(--color-primary-6);
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: var(--color-primary-10);
+}
+
+select option {
+    background-color: var(--color-primary-1);
+    color: var(--color-primary-6);
+    font-family: 'Nunito';
+}
+
+
 input {
     padding: 5px;
+    width: 25%;
     font-size: 1rem;
     border: 2px solid var(--color-primary-4);
     border-radius: 10px;

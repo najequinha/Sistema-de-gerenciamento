@@ -13,7 +13,7 @@ if (!$conn) {
 }
 
 else {
-    echo "Conexão bem sucedida!!!!!!!!!!!!";
+    // echo "Conexão bem sucedida!!!!!!!!!!!!";
 }
 
 ?>

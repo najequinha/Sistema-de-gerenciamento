@@ -100,6 +100,50 @@ body {
     --color-neutra-1: #1d1d1d;
 }
 
+.search-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search {
+    padding: 5px;
+    width: 40%;
+    font-size: 1rem;
+    border: 2px solid var(--color-primary-4);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: 'Nunito';
+}
+
+#search:focus {
+    border-color: var(--color-primary-10);
+}
+
+#search-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--color-primary-8);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 5px 10px var(--color-primary-5);
+}
+
+#search-btn:hover {
+    background-color: var(--color-primary-10);
+    color: var(--color-primary-5);
+    font-weight: 500;
+}
+
 .container{
     padding: 20px 80px 20px 80px;
     width: 100%;
@@ -122,6 +166,14 @@ table {
 th, td {
     padding: 12px 15px; 
     border: 1px solid #ddd; 
+}
+
+.fa-solid{
+    color: var(--color-primary-8);
+}
+
+.op-btn{
+    text-decoration: none;
 }
 
 thead {

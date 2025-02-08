@@ -1,3 +1,27 @@
+<?php
+
+include './DB/config.php';
+
+if(isset($_POST['cadastrar'])){
+
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+
+    $sql = "INSERT INTO usuarios(nome,email,telefone) VALUES ('$nome', '$email', '$telefone')";
+
+    $result = mysqli_query($conn, $sql);
+
+    if($result){
+        echo '<script> alert("Cadastrado com sucesso!") </script>';
+    }
+    else{
+        die(mysqli_error($conn));
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,11 +39,11 @@
             </h2>
             <div class="nav-btns">
 
-                <a href="#index.php" class="go-back-btn">
+                <a href="index.php" class="go-back-btn">
                     <i class="fa-solid fa-angle-left"></i>
                     <span class="btn-title">Voltar</span>
                 </a>
-                <a href="#usuarios_listar.php" class="go-back-btn">
+                <a href="usuarios_listar.php" class="go-back-btn">
                     <i class="fa-solid fa-bars"></i>
                     <span class="btn-title">Listar usuários</span>
                 </a>
@@ -33,13 +57,13 @@
                     Cadastro de usuários
                 </h2>
 
-                <form action="#" method="post">
+                <form method="post">
                     <div class="inputs">
-                        <input type="text" name="nome" placeholder="Nome" required>
-                        <input type="email" name="email" placeholder="E-mail" required>
-                        <input type="tel" name="telefone" placeholder="Telefone" required>
+                        <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                        <input type="text" name="email" id="email" placeholder="Email" required>
+                        <input type="text" name="telefone" id="telefone" placeholder="Telefone" required>
                     </div>
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" name = "cadastrar" id = "bot" value = "cadastrar">Cadastrar</button>
                 </form>
                 
             </div>
